@@ -1,0 +1,12 @@
+{
+  "name": "hhy-cli",
+  "version": "1.0.0",
+  "description": "A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects",
+  "main": "main.js",
+  "bin": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hhy",
+  "license": "ISC"
+}
