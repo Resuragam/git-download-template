@@ -4,16 +4,12 @@
   "description": "A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects",
   "main": "main.js",
   "bin": {
-    "hhy-cli": "./bin/index.js",
-    "hhy-cli-add": "bin/hhy-cli-add",
-    "hhy-cli-delete": "bin/hhy-cli-delete",
-    "hhy-cli-list": "bin/hhy-cli-list",
-    "hhy-cli-init": "bin/hhy-cli-init"
+    "hhy-cli": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "commonjs",
+  "type": "module",
   "author": "hhy",
   "license": "ISC",
   "dependencies": {
