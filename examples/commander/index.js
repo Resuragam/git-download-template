@@ -1,3 +1,9 @@
+/**
+ * @Description: 尝试commander的使用
+ * @author Haoyu Huang
+ * @date 2023/5/25
+*/
+
 const program = require('commander')
 
 program

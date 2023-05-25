@@ -2,21 +2,31 @@
   "name": "hhy-cli",
   "version": "1.0.0",
   "description": "A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects",
-  "main": "main.js",
+  "main": "index.js",
   "bin": {
-    "hhy-cli": "./bin/index.js"
+    "hhy-cli": "bin/index.js"
+  },
+  "directories": {
+    "example": "examples"
   },
   "scripts": {
+    "commander": "node ./examples/commander/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "hhy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Resuragam/hhy-cli.git"
+  },
+  "author": "Resuragam",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Resuragam/hhy-cli/issues"
+  },
+  "homepage": "https://github.com/Resuragam/hhy-cli#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^10.0.1",
-    "cross-spawn": "^7.0.3",
+    "chalk": "^4.1.0",
+    "commander": "^6.2.0",
     "download-git-repo": "^3.0.2",
-    "inquirer": "6.2.2",
-    "ora": "^5.4.1"
+    "inquirer": "^7.3.3"
   }
 }
