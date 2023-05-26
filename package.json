@@ -4,7 +4,7 @@
   "description": "A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects",
   "main": "index.js",
   "bin": {
-    "hhy-cli": "bin/index.js"
+    "hhy-cli": "src/bin/index.js"
   },
   "directories": {
     "example": "examples"
