@@ -11,6 +11,7 @@
   },
   "scripts": {
     "commander": "node ./examples/commander/index.js",
+    "commander:create": "node ./examples/commander/create.js",
     "inquirer": "node ./examples/inquirer/index.js",
     "chalk": "node ./examples/chalk/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
