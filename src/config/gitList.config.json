@@ -1,0 +1,9 @@
+{
+  "repository": [
+    {
+      "name": "vue",
+      "description": "vue3 + typescript template",
+      "address": ""
+    }
+  ]
+}

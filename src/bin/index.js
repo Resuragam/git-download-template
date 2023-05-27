@@ -24,19 +24,22 @@ program
     })
 
 program
-    .command('git <project-name>')
+    .command('git <project-name> [option]')
     .description('Use remote repositories template project')
     .action(async (projectName, option) => {
         await git(projectName)
     })
 
 program
-    .option('-l, --List')
+    .command('list [option]')
     .description('View template projects list in remote repositories')
-    .action(() => {
+    .option('-a, --Add', 'Add a remote repository template')
+    .option('-d, --Delete', 'delete a remote repository template')
+    .action(async () => {
         console.log('list')
+        console.log(process.argv)
+        console.log(process.argv.slice(3))
     })
-
 
 program.parse(process.argv)
 

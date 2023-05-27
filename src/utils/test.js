@@ -1,5 +1,2 @@
-const {
-    selectFeature
-} = require('../lib/command/create/create')
-
-selectFeature()
+const config = require('../config/feature.config')
+console.log(JSON.stringify(config))
