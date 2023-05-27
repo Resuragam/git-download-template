@@ -1,5 +1,5 @@
 {
-  "repository": [
+  "remoteRepositoryList": [
     {
       "name": "vue",
       "description": "vue3 + typescript template",

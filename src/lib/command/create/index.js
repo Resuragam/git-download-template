@@ -22,7 +22,7 @@ async function index(projectName) {
     // 改写项目的 package.json 基本信息，比如 name、description
     changePackageInfo(projectName);
     // 安装 feature
-    installFeature(feature);
+    install(feature);
     // 结束
     end(projectName);
 }

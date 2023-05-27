@@ -8,6 +8,6 @@
  * @Description:
  * @author: Haoyu Huang
 */
-function installFeature() {
+function install() {
 
 }
