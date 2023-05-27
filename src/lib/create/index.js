@@ -1,5 +1,5 @@
 /**
- * @Description: 创建项目函数 create
+ * @Description: 创建项目指令 create 生命周期
  * @author: Haoyu Huang
  * @date: 2023/5/27
 */
@@ -10,9 +10,9 @@ const {
     initProjectDir,
     changePackageInfo,
     end
-} = require('../utils/create')
+} = require('./create')
 
-async function create(projectName) {
+async function index(projectName) {
     // 判断文件是否已经存在
     isFileExist(projectName)
     // 获取需要的功能
@@ -28,5 +28,5 @@ async function create(projectName) {
 }
 
 module.exports = {
-    create,
+    create: index,
 }

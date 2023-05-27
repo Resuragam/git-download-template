@@ -11,7 +11,7 @@ const inquirer = require('inquirer')
 const { featureConfig } = require('./feature.config')
 const {
     printMessage
-} = require('./log')
+} = require('../../utils/log')
 const {
     getFilePath
 } = require('./file')
@@ -36,7 +36,7 @@ function isFileExist(projectName) {
  * @return: feature { Array<string>> } 选择的配置项
 */
 async function selectFeature() {
-    printMessage(chalk.blue(`HHY CLI v${require('../../package.json').version}`))
+    printMessage(chalk.blue(`HHY CLI v${require('../../../package.json').version}`))
     printMessage('Start initializing the project:')
     printMessage('')
 
@@ -52,6 +52,8 @@ async function selectFeature() {
 */
 function initProjectDir(projectName) {
     shell.exec(`mkdir ${projectName}`)
+    shell.cd(projectName)
+    shell.exec('npm init -y')
 }
 
 function changePackageInfo(projectName) {
@@ -62,8 +64,6 @@ function changePackageInfo(projectName) {
 function end(projectName) {
 
 }
-
-initProjectDir('a')
 
 module.exports = {
     isFileExist,
