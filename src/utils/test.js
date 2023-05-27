@@ -1,5 +1,5 @@
 const {
     selectFeature
-} = require('../lib/create/create')
+} = require('../lib/command/create/create')
 
 selectFeature()

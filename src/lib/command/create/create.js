@@ -8,13 +8,13 @@ const fs = require('fs')
 const chalk = require("chalk")
 const shell = require('shelljs')
 const inquirer = require('inquirer')
-const { featureConfig } = require('./feature.config')
+const { featureConfig } = require('../../../config/feature.config')
 const {
     printMessage
-} = require('../../utils/log')
+} = require('../../../utils/log')
 const {
     getFilePath
-} = require('./file')
+} = require('../../../utils/file')
 
 /**
  * @Description: 验证当前目录下面项目是否存在，如果存在则退出执行
@@ -36,7 +36,7 @@ function isFileExist(projectName) {
  * @return: feature { Array<string>> } 选择的配置项
 */
 async function selectFeature() {
-    printMessage(chalk.blue(`HHY CLI v${require('../../../package.json').version}`))
+    printMessage(chalk.blue(`HHY CLI v${require('../../../../package.json').version}`))
     printMessage('Start initializing the project:')
     printMessage('')
 

@@ -7,8 +7,8 @@
 */
 
 const program = require('commander')
-const { create } = require('../lib/create/index')
-const { git } = require('../lib/git/index')
+const { create } = require('../lib/command/create/index')
+const { git } = require('../lib/command/git/index')
 const { version } = require('../../package.json')
 
 // CLI 基本的版本信息
@@ -33,6 +33,10 @@ program
 program
     .option('-l, --List')
     .description('View template projects list in remote repositories')
+    .action(() => {
+        console.log('list')
+    })
+
 
 program.parse(process.argv)
 
