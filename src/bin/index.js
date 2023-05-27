@@ -27,25 +27,24 @@ program
     })
 
 program
-    .command('clone <projectName>')
+    .command('clone <repositoryName>')
     .description('Use remote repositories template project')
-    .action(async (projectName, option) => {
-        await clone(projectName)
+    .action(async (repositoryName, option) => {
+        await clone(repositoryName)
     })
 
 
 program
-    .command('add <url> <projectName>')
+    .command('add <repositoryName>')
     .description('Add a remote repository template')
-    .action(async (url, projectName) => {
-        console.log(url, projectName)
-        await add(process.argv.slice(3))
+    .action(async (repositoryName) => {
+        await add(repositoryName)
     })
 
 program
-    .command('del <projectName>')
+    .command('del <repositoryName>')
     .description('Delete a remote repository template')
-    .action(async (projectName) => {
+    .action(async (repositoryName) => {
         await del(process.argv.slice(3))
     })
 
