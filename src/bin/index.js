@@ -8,7 +8,10 @@
 
 const program = require('commander')
 const { create } = require('../lib/command/create/index')
-const { git } = require('../lib/command/git/index')
+const { clone } = require('../lib/command/clone/index')
+const { add } = require('../lib/command/add/index')
+const { del } = require('../lib/command/del/index')
+const { list } = require('../lib/option/list/index')
 const { version } = require('../../package.json')
 
 // CLI 基本的版本信息
@@ -17,28 +20,40 @@ program
     .usage('<command> [options]')
 
 program
-    .command('create <project-name>')
+    .command('create <projectName>')
     .description('Create new project use from hhy-cli')
     .action(async (projectName, option) => {
         await create(projectName)
     })
 
 program
-    .command('git <project-name> [option]')
+    .command('clone <projectName> [option]')
     .description('Use remote repositories template project')
     .action(async (projectName, option) => {
-        await git(projectName)
+        await clone(projectName)
+    })
+
+
+program
+    .command('add <url> <projectName>')
+    .description('Add a remote repository template')
+    .action(async (url, projectName) => {
+        console.log(url, projectName)
+        await add(process.argv.slice(3))
     })
 
 program
-    .command('list [option]')
+    .command('del <projectName>')
+    .description('Delete a remote repository template')
+    .action(async (projectName) => {
+        await del(process.argv.slice(3))
+    })
+
+program
+    .option('-l, --list')
     .description('View template projects list in remote repositories')
-    .option('-a, --Add', 'Add a remote repository template')
-    .option('-d, --Delete', 'delete a remote repository template')
-    .action(async () => {
-        console.log('list')
-        console.log(process.argv)
-        console.log(process.argv.slice(3))
+    .action(async (projectName) => {
+        await list()
     })
 
 program.parse(process.argv)
