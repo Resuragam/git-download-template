@@ -27,7 +27,7 @@ program
     })
 
 program
-    .command('clone <projectName> [option]')
+    .command('clone <projectName>')
     .description('Use remote repositories template project')
     .action(async (projectName, option) => {
         await clone(projectName)
@@ -50,9 +50,8 @@ program
     })
 
 program
-    .option('-l, --list')
-    .description('View template projects list in remote repositories')
-    .action(async (projectName) => {
+    .option('-l, --list', 'View template projects list in remote repositories')
+    .action(async () => {
         await list()
     })
 
