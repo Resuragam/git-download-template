@@ -11,6 +11,9 @@ const {
     initRepository,
     createRepository,
 } = require('./init')
+const {
+    endAdd
+} = require('./end')
 
 async function add(repositoryName) {
     // 判断当前项目是否已经存在远程仓库列表
@@ -19,6 +22,8 @@ async function add(repositoryName) {
     const { description, address } = await initRepository(repositoryName)
     // 写入配置文件
     await createRepository(repositoryName, description, address)
+    // 结束
+    endAdd(repositoryName)
 }
 
 module.exports = {

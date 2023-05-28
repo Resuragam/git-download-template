@@ -11,7 +11,7 @@
 */
 
 function printMessage(message) {
-    return console.log(message)
+    return message && console.log(message)
 }
 
 module.exports = {

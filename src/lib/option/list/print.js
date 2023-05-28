@@ -13,7 +13,7 @@ const { printMessage } = require('../../../utils/log')
 */
 function printRemoteRepository(remoteRepositoryList) {
     remoteRepositoryList.forEach((remoteRepository) => {
-        printMessage(`⚙  ${chalk.blue(remoteRepository.name)} (${chalk.blue(remoteRepository.description)})⚙  `)
+        printMessage(`⚙  ${chalk.blue(remoteRepository.name)} (${chalk.blue(remoteRepository.description)})`)
     })
 }
 
