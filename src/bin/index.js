@@ -45,7 +45,7 @@ program
     .command('del <repositoryName>')
     .description('Delete a remote repository template')
     .action(async (repositoryName) => {
-        await del(process.argv.slice(3))
+        await del(repositoryName)
     })
 
 program
