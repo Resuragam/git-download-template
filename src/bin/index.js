@@ -15,7 +15,7 @@ program
 
 program
     .command('create <projectName>')
-    .description('Create new project use from hhy-cli')
+    .description('Create new project use from gitdt')
     .action(async (projectName, option) => {
         await create(projectName)
     })
