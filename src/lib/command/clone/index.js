@@ -4,8 +4,23 @@
  * @date: 2023/5/27
 */
 
-async function clone() {
+const {
+    isRepositoryExist
+} = require('./repository')
+const {
+    cloneRepository
+} = require('./clone')
+const {
+    endClone
+} = require('./end')
 
+async function clone(repositoryName) {
+    // 判断当前远程仓库是否存在
+    isRepositoryExist(repositoryName)
+    // 克隆远程仓库
+    await cloneRepository(repositoryName)
+    // 结束 clone 指令
+    endClone(repositoryName)
 }
 
 module.exports = {
