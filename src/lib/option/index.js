@@ -15,7 +15,7 @@ async function options(operator) {
 	if(operator === '-l' || operator === '--list') {
 		return list()
 	}else {
-		return exec('hhy-cli -h')
+		return exec('gitdt -h')
 	}
 }
 

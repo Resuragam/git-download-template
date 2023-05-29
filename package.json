@@ -1,10 +1,10 @@
 {
-  "name": "hhy-cli",
+  "name": "gitdt",
   "version": "1.0.0",
   "description": "A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects",
   "main": "index.js",
   "bin": {
-    "hhy-cli": "src/bin/index.js"
+    "gitdt": "src/bin/index.js"
   },
   "directories": {
     "example": "examples"
