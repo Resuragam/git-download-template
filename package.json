@@ -1,7 +1,7 @@
 {
   "name": "gitdt",
   "version": "1.0.0",
-  "description": "A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects",
+  "description": "🛠 A plugin - download template projects by using git",
   "main": "index.js",
   "bin": {
     "gitdt": "src/bin/index.js"
