@@ -14,6 +14,7 @@ const fs = require("fs");
  * @return: filePath { String } 当前文件路径
 */
 function getFilePath(projectName) {
+    console.log(path.resolve(process.cwd(), projectName))
     return path.resolve(process.cwd(), projectName)
 }
 

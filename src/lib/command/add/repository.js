@@ -5,11 +5,13 @@
 */
 
 const chalk = require('chalk')
+const path = require('path')
 const {
-    readJsonFile
+    getFilePath,
+    readJsonFile,
 } = require('../../../utils/file')
 const {
-    printMessage
+    printMessage,
 } = require('../../../utils/log')
 
 /**
@@ -19,7 +21,7 @@ const {
  * @return: { Boolean }
 */
 function isRepositoryExist(repositoryName){
-    const { remoteRepositoryList } = readJsonFile('../../../config/remoteRepository.json')
+    const { remoteRepositoryList } = readJsonFile(path.resolve(__dirname,'../../../config/remoteRepository.json'))
     remoteRepositoryList.forEach((remoteRepository) => {
         if(remoteRepository.name === repositoryName) {
             printMessage(`‼ ${chalk.red('This project has already exist in remote repositories list !!!')}`)

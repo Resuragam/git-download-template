@@ -15,7 +15,7 @@ const {
  * @param: repositoryName { String } 远程仓库名称
  */
 function endDel(repositoryName) {
-    printMessage(`✨  Successfully delete remote repository ${chalk.yellow(repositoryName)} from repositories list!`)
+    printMessage(`✨  Successfully delete ${chalk.red('remote')} repository ${chalk.yellow(repositoryName)} from repositories list!`)
 }
 
 module.exports = {

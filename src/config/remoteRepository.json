@@ -1,14 +1,9 @@
 {
   "remoteRepositoryList": [
     {
-      "name": "vue",
-      "description": "vue3 + typescript template",
+      "name": "Resuragam",
+      "description": "The GitHub homepage introduces myself.",
       "address": "https://github.com/Resuragam/Resuragam"
-    },
-    {
-      "name": "vue2",
-      "description": "test",
-      "address": "test"
     }
   ]
 }

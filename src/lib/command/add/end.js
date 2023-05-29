@@ -15,7 +15,7 @@ const {
  * @param: repositoryName { String } 远程仓库名称
 */
 function endAdd(repositoryName) {
-    printMessage(`✨  Successfully add remote repository ${chalk.yellow(repositoryName)} into repositories list!`)
+    printMessage(`✨  Successfully ${chalk.green('add')} remote repository ${chalk.yellow(repositoryName)} into repositories list!`)
 }
 
 module.exports = {

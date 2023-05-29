@@ -6,6 +6,7 @@
 
 const inquirer = require('inquirer')
 const chalk = require('chalk')
+const path = require('path')
 const {
     readJsonFile,
     writeJsonFile,
@@ -41,13 +42,13 @@ async function initRepository(repositoryName) {
  * @param: address { String } 远程仓库模板地址
 */
 async function createRepository(repositoryName, description, address) {
-    const remoteRepositoryConfig = readJsonFile('../../../config/remoteRepository.json')
-    remoteRepositoryConfig["remoteRepositoryList"].push({
+    const remoteRepositoryConfig = readJsonFile(path.resolve(__dirname, '../../../config/remoteRepository.json'))
+    remoteRepositoryConfig.remoteRepositoryList.push({
         name: repositoryName,
         description,
         address
     })
-    writeJsonFile('../../../config/remoteRepository.json', remoteRepositoryConfig)
+    writeJsonFile(path.resolve(__dirname, '../../../config/remoteRepository.json'), remoteRepositoryConfig)
 }
 
 module.exports = {
