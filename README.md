@@ -1,17 +1,17 @@
-# hhy-cli
-🛠A simple demo-level front-end CLI for creating integrated Vue3 + TypeScript projects
+# git-download-template
+🛠A plugin - download template projects by using git
 
 ## Usage
 
 First install the CLI in the global environment
 
 ~~~
-pnpm i -g hhy-cli
+pnpm i -g gitdt
 ~~~
 
-Start creating your own project
+Start download your own template
 
 ~~~
-hhy-cli
+gitdt
 ~~~
 

@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Resuragam/hhy-cli.git"
+    "url": "git+https://github.com/Resuragam/git-download-template.git"
   },
   "author": "Resuragam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Resuragam/hhy-cli/issues"
+    "url": "https://github.com/Resuragam/git-download-template/issues"
   },
-  "homepage": "https://github.com/Resuragam/hhy-cli#readme",
+  "homepage": "https://github.com/Resuragam/git-download-template#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.0",
