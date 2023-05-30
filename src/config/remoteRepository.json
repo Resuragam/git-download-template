@@ -1,9 +1,3 @@
 {
-  "remoteRepositoryList": [
-    {
-      "name": "Resuragam",
-      "description": "The GitHub homepage introduces myself.",
-      "address": "https://github.com/Resuragam/Resuragam"
-    }
-  ]
+  "remoteRepositoryList": []
 }
