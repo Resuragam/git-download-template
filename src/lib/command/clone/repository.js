@@ -5,6 +5,7 @@
 */
 
 const chalk = require('chalk')
+const path = require('path')
 const {
     readJsonFile
 } = require('../../../utils/file')
@@ -18,7 +19,7 @@ const {
  * @param: repositoryName { String } 项目名称
 */
 function isRepositoryExist(repositoryName){
-    const { remoteRepositoryList } = readJsonFile('../../../config/remoteRepository.json')
+    const { remoteRepositoryList } = readJsonFile(path.resolve(__dirname, '../../../config/remoteRepository.json'))
     for (let i = 0; i < remoteRepositoryList.length; i ++) {
         if(remoteRepositoryList[i].name === repositoryName) {
             return

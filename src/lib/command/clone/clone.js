@@ -5,6 +5,7 @@
 */
 
 const child_process = require('child_process')
+const path = require('path')
 const ora = require('ora')
 const chalk = require('chalk')
 const {
@@ -20,7 +21,7 @@ const {
  * @param: repositoryName { String } 项目名称
 */
 async function cloneRepository (repositoryName) {
-    const remoteRepositoryConfig = await readJsonFile('../../../config/remoteRepository.json')
+    const remoteRepositoryConfig = await readJsonFile(path.resolve(__dirname, '../../../config/remoteRepository.json'))
     remoteRepositoryConfig["remoteRepositoryList"].forEach((repository) => {
         if(repository.name === repositoryName) {
             const spinner = ora('Loading clone project...').start();
